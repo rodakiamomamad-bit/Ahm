@@ -1,0 +1,3 @@
+export function showScreen(id){document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("hidden",s.id!==id));window.scrollTo({top:0,behavior:"smooth"});document.getElementById("main").focus({preventScroll:true})}
+export function toast(message){const t=document.getElementById("toast");t.textContent=message;t.classList.add("show");clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.remove("show"),2500)}
+export function shareFile(blob,name){const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}

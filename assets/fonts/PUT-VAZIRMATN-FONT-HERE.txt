@@ -1,0 +1,1 @@
+Copy your existing Vazirmatn-VF.ttf into this folder.

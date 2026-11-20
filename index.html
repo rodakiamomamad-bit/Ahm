@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#11151d">
+  <meta name="description" content="A Little World of You — دنیای کوچیکی که از انتخاب‌های خودت ساخته می‌شه.">
+  <title>A Little World of You</title>
+  <link rel="preload" href="assets/fonts/Vazirmatn-VF.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/questionnaire.css">
+  <link rel="stylesheet" href="css/world.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <a class="wordmark" href="#" aria-label="صفحه آغاز"><span class="wordmark-mark">✳</span><span>A LITTLE WORLD <small>OF YOU</small></span></a>
+      <div class="top-actions">
+        <span class="privacy-note"><span class="privacy-dot"></span> فقط روی همین دستگاه</span>
+        <button id="sound-toggle" class="icon-button" type="button" aria-label="فعال‌سازی صدای محیط" title="صدای محیط">♫</button>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section id="welcome-screen" class="screen welcome-screen">
+        <div class="welcome-orbit orbit-one"></div><div class="welcome-orbit orbit-two"></div>
+        <div class="welcome-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> A PERSONAL LITTLE UNIVERSE</p>
+          <h1>یه دنیا هست<br>که <em>فقط مال توئه.</em></h1>
+          <p class="intro">از رنگ‌هایی که دوست داری تا گوشه‌های خیالی ذهنت؛ با چند انتخاب کوچیک، قراره یه جهان مخصوص خودت بسازیم.</p>
+          <div class="welcome-meta"><span>✦ بدون جواب درست یا غلط</span><span>✦ هر سؤالی رو خواستی رد کن</span><span>✦ جواب‌هات خصوصی می‌مونن</span></div>
+          <button id="start-button" class="primary-button" type="button"><span>بریم دنیاتو بسازیم</span><b>↙</b></button>
+          <button id="resume-button" class="text-button hidden" type="button">ادامه از جایی که مونده بود</button>
+          <p class="creator-credit">یک تجربه‌ی کوچک، ساخته‌شده توسط <strong>Mehrzad</strong></p>
+        </div>
+        <div class="welcome-art" aria-hidden="true">
+          <div class="art-sun"></div><div class="art-ring ring-a"></div><div class="art-ring ring-b"></div>
+          <div class="art-planet planet-a"></div><div class="art-planet planet-b"></div>
+          <div class="art-spark spark-a">✦</div><div class="art-spark spark-b">✳</div><div class="art-spark spark-c">·</div>
+          <div class="art-caption">YOUR OWN<br>CONSTELLATION <span>✧</span></div>
+        </div>
+      </section>
+
+      <section id="quiz-screen" class="screen quiz-screen hidden" aria-live="polite">
+        <div class="quiz-topline">
+          <button id="exit-quiz" class="text-button" type="button">← خروج</button>
+          <div class="progress-copy"><span id="progress-category">شروع آشنایی</span><strong id="progress-count">۰ از ۰</strong></div>
+        </div>
+        <div class="progress-track"><div id="progress-fill"></div></div>
+        <div class="quiz-layout">
+          <aside class="chapter-aside"><span class="chapter-index" id="chapter-index">01</span><div class="chapter-rule"></div><p id="chapter-name">رنگ‌ها و حال‌وهوا</p><span class="chapter-caption">A LITTLE DETAIL<br>ABOUT YOU</span></aside>
+          <article class="question-panel">
+            <p class="question-kicker" id="question-kicker">اول از همه...</p>
+            <h2 id="question-title">چه رنگی بیشتر به دلت می‌شینه؟</h2>
+            <p id="question-help" class="question-help"></p>
+            <div id="answer-area" class="answer-area"></div>
+            <div class="question-footer"><button id="skip-button" class="text-button" type="button">فعلاً ردش می‌کنم</button><div class="nav-buttons"><button id="back-button" class="secondary-button" type="button">قبلی</button><button id="next-button" class="primary-button" type="button"><span>بعدی</span><b>←</b></button></div></div>
+          </article>
+        </div>
+        <p class="quiz-footnote">هر جوابی که بدی، فقط کمک می‌کنه دنیات شبیه‌تر به خودت بشه.</p>
+      </section>
+
+      <section id="secret-screen" class="screen secret-screen hidden">
+        <div class="secret-stars" aria-hidden="true">✦　·　✧　　 ·　✦</div>
+        <p class="eyebrow">THE LITTLE DETAILS ARE IN PLACE</p>
+        <h2>خب... حالا وقتشه<br><em>یه چیزی بسازیم.</em></h2>
+        <p>از بین انتخاب‌هات، یه گوشه‌ی کوچیک از جهان خودت رو کنار هم چیدیم. آماده‌ای ببینیش؟</p>
+        <div class="secret-stat"><span id="answered-count">۰</span><small>جزئیات از دنیات کشف شد</small></div>
+        <button id="create-world" class="secret-button" type="button"><span class="secret-button-glow"></span><span>Create Something Secret</span><b>✧</b></button>
+        <button id="review-answers" class="text-button" type="button">می‌خوام جواب‌هام رو مرور کنم</button>
+      </section>
+
+      <section id="world-screen" class="screen world-screen hidden">
+        <div class="world-toolbar">
+          <a class="world-brand" href="#" id="world-home">✳ <span>YOUR LITTLE WORLD</span></a>
+          <div class="world-tools"><button id="world-sound" class="world-tool" type="button" aria-label="صدا">♫</button><button id="export-button" class="world-tool" type="button">اشتراک‌گذاری</button><button id="reset-button" class="world-tool" type="button">پاک‌کردن جواب‌ها</button></div>
+        </div>
+        <section class="universe-hero" id="universe-hero">
+          <div class="universe-grain"></div><div class="universe-orb orb-large"></div><div class="universe-orb orb-small"></div>
+          <div class="universe-content"><p class="eyebrow">A WORLD SHAPED BY YOU</p><h1 id="world-title">دنیای کوچیک تو</h1><p id="world-subtitle"></p><span class="hero-coordinate">A LITTLE UNIVERSE · EST. JUST NOW</span></div>
+          <div class="hero-moon" aria-hidden="true"><span></span></div>
+          <div class="hero-flower flower-one" aria-hidden="true">✿</div><div class="hero-flower flower-two" aria-hidden="true">✽</div>
+        </section>
+        <nav class="world-nav" aria-label="بخش‌های دنیا">
+          <button class="world-tab active" data-area="universe" type="button">01 <span>جهان من</span></button>
+          <button class="world-tab" data-area="favorites" type="button">02 <span>علاقه‌مندی‌ها</span></button>
+          <button class="world-tab" data-area="garden" type="button">03 <span>باغ من</span></button>
+          <button class="world-tab" data-area="companion" type="button">04 <span>همراه کوچولو</span></button>
+          <button class="world-tab" data-area="happy" type="button">05 <span>جای امن من</span></button>
+          <button class="world-tab" data-area="treasures" type="button">06 <span>گنج‌های پنهان</span></button>
+        </nav>
+        <div id="world-content" class="world-content"></div>
+        <footer class="world-footer"><span>Made with curiosity & a little imagination</span><strong>Created by Mehrzad ✳</strong><button id="privacy-info" class="text-button" type="button">حریم خصوصی</button></footer>
+      </section>
+    </main>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <dialog id="privacy-dialog" class="privacy-dialog"><button class="dialog-close" type="button" aria-label="بستن">×</button><p class="eyebrow">YOUR ANSWERS, YOURS</p><h3>جواب‌هات کجا می‌مونن؟</h3><p>تمام پاسخ‌ها فقط در حافظه‌ی مرورگر همین دستگاه ذخیره می‌شن. هیچ سرور، حساب کاربری، ابزار تحلیل یا ارسال خودکاری وجود نداره. فقط وقتی خودت دکمه‌ی اشتراک‌گذاری رو بزنی، فایل پاسخ‌ها برای انتخاب و ارسال توسط خودت آماده می‌شه.</p><button class="primary-button dialog-ok" type="button">متوجه شدم</button></dialog>
+  </div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
